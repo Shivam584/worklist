@@ -4,8 +4,7 @@
     padding: 0;
 }
 header{
-    padding: 1em 0;
-    
+    padding: 1em 0 0 0 ;
     /* margin-bottom: 2em;    */
     background-color: rgba(0, 0, 0, 0.6); 
 }
@@ -19,7 +18,6 @@ header{
     margin-right: 2em;
 }
 .logo{
-        text-shadow: 2px 2px black;
         color: whitesmoke;
         text-shadow: 2px 2px black;
         font-family: 'oxanium';

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'baseapp/base.html' %}
+{% load static %}
+{% block title %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<title>list page</title>
+ <link rel="stylesheet" href="{% static 'css/newhome.css' %}">
+{% endblock title %}
+
+
+  {% block content %}
+<div class="box-modifiedcss">
+   <img src=" {% static 'images/background.png' %}" alt="background" class="background-image-modifiedcss">
+   <p class="content-modifiedcss">
+    Hi my name is <b class="pan">Shivam Kumar Agarwal </b> ,and you are viewing my <span
+                class="pan">Worklist</span> website.This is fully responsive website with mutiuser authentication design with help of Html, CSS            Javascript, SQlite3 & Django.
+   </p>
+</div>
+{% endblock content %}

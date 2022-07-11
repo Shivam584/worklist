@@ -1,0 +1,95 @@
+
+body{
+    background-color: whitesmoke;
+}
+.dele {
+    text-decoration: none;
+    margin: 0.5em 0;
+    font-size: smaller;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0.5em;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    background-color: rgba(255, 0, 0, 0.6);
+    color: rgb(247, 234, 220);
+}
+
+.dele:hover {
+    text-decoration: none;
+    color: rgba(255, 0, 0, 0.6);
+    background-color: rgb(247, 234, 220);
+    border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.margin {
+    margin-bottom: 1.5em;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+#todos-title,
+textarea {
+    width: 75%;
+}
+
+.list {
+    width: 70%;
+    margin: 1.5em auto;
+    text-align: center;
+}
+
+table {
+    font-family: 'ubuntu';
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: wheat;
+    padding-top: 1em;
+    border-radius: 5px;
+    border: 2px solid brown;
+    color:  rgba(0, 0, 0, 0.91);
+
+}
+table th{
+    color :black;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: .5em 0;
+}
+table td{
+    padding: 1em;
+}
+.sSig {
+    color: rgb(252, 0, 0);
+    background-color: rgb(245, 238, 238);
+    text-align: center;
+    margin: 0.5em auto;
+}
+
+#descpt {
+    width: 50%;
+}
+
+@media screen and (max-width : 530px) {
+    .list {
+        width: 100%;
+    }
+    table {
+    font-size: .9rem;
+        padding-top: .7em;
+    }
+table th {
+    color: black;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: .25em 0;
+}
+    .sSig {
+        font-size: 0.8rem;
+    }
+}
+
+.cur {
+    border-bottom: 2px solid black;
+}

@@ -1,0 +1,95 @@
+textarea {
+    width: 100%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: wheat;
+    margin: 5em auto;
+    width: 45%;
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 2em 2em black;
+    position: relative;
+    z-index: 1;
+    margin-top: 3em;
+}
+
+.form::before {
+    content: '';
+    border: 4px double rgb(19, 19, 19);
+    position: absolute;
+    top: .51em;
+    bottom: .51em;
+    left: .51em;
+    right: .51em;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.add-btn{
+    margin: 0.5em 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    line-height: normal;
+    padding: 0.5em;
+    border-radius: 2px;
+    background-color: lightskyblue;
+    border: none;
+}
+
+.add-btn:hover {
+    background-color: rgb(3, 134, 216);
+    color: whitesmoke;
+}
+
+
+.margin {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+#todos-title,
+
+
+.list {
+    width: 70%;
+    margin: 1.5em auto;
+    text-align: center;
+}
+.paragraphogAdd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.error{
+    text-align: center;
+    color: red;
+    font-size: 1.3rem;
+    padding: .5em 1em;
+}
+
+
+@media screen and (max-width : 700px) {
+.form {
+        width: 60%;
+    }
+textarea{
+    width: 100%;
+}
+}
+
+.cur {
+    border-bottom: 2px solid black;
+}

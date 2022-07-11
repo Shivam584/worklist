@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'baseapp/base.html' %}
+{% load static %}
+
+{% block title %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<title>add page</title>
+
+<link rel="stylesheet" href="{% static 'css/addcss.css' %}">
+{% endblock title %}
+
+
+
+
+{% block content %}
+        {% for message in messages %}
+   <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+       <strong>{{message}}</strong>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+<div class="form">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p class="paragraphogAdd">
+            <label for="todos-title">Title</label>
+            <input type="text" id="todos-title" class="margin" placeholder="Enter Title here" name="title">
+        </p>
+        <p  class="paragraphogAdd">
+            <label for="Description">Description</label>
+            <textarea name="Description" id="Description" cols="50" rows="10" class="margin" placeholder="Enter Description here"></textarea>
+        </p>
+        <input type="submit" class="add-btn" id="submitted" value="Add to the list">
+        {% if error %}
+        <p class="error">
+            Enter Title & Description Fields
+        </p>
+        {% endif %}
+
+    </form>
+    </div>
+
+
+    {% endblock content %}
+    

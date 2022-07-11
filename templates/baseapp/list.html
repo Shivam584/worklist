@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'baseapp/base.html' %}
+{% load static %}
+{% block title %}
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<title>list page</title>
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock title %}
+
+
+  {% block content %}
+<div class="list">
+    <table class="margin">
+        <thead>
+            <tr>
+                <th>DATE/TIME</th>
+                <th>TITLE</th>
+                <th id="descpt">DESCRIPTION</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+         {% for d in data %}
+            <tr>
+                <td>{{ d.Datetime }}</td>
+                <td> {{d.title}} </td>
+                <td> {{d.desc}} </td>
+                <td><a href="{% url 'baseapp:delete' d.id %} " class="dele" id="button" >DELETE</a> </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

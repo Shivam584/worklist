@@ -1,0 +1,79 @@
+{% extends 'baseapp/base.html' %}
+{% load static %}
+{% block title %}
+ <title>Sign in/Sign up</title>
+<link rel="stylesheet" href="{% static 'css/login-register.css' %}">
+   {% endblock title %}
+   
+
+   {% block content %}
+    {% for message in messages %}
+   <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+       <strong>{{message}}</strong>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+<div class="body">
+    <div class="container">
+        <div class="bg-box">
+            <div class="signin">
+                <h2>Already have an account ?</h2>
+                <button class="btn">
+                    sign in
+                </button>
+            </div>
+            <div class="signup">
+                <h2>Do you want sign up?</h2>
+                <button class="btn">
+                    sign up
+                </button>
+            </div>
+        </div>
+        <div class="form">
+            <form action="" method="post" class="form-in">
+                <h1>Sign In</h1>
+                {% csrf_token %}
+                <input type="hidden" name="case" value="True">
+                <input type="text" name="username" placeholder="Username" >
+                <input type="password"name="password" placeholder="Password"  >
+                <input type="submit" class="btn" value="Sign in">
+            </form>
+            <form action=""  method="post" class="form-up act">
+                <h1>Sign Up</h1>
+                {% csrf_token %}
+                <input type="hidden" name="case" value="False">
+                <input type="text"  name="username" placeholder="Username">
+                <input type="email" name="email" placeholder="Enter email">
+                <input type="password" name="password" placeholder="Confirm Password">
+                <input type="submit" class="btn" value="Sign up">
+            </form>
+    </div>
+    </div>
+   {% endblock content %}
+   
+   {% block script %}
+ <script>
+        let c=document.getElementsByClassName('form')[0];
+        let b=document.getElementsByTagName('body')[0];
+        let d=document.getElementsByClassName('form-up')[0];
+        let sn=document.getElementsByClassName('btn')[0];
+        let sup=document.getElementsByClassName('btn')[1];
+        let forgpass=document.getElementById('forget');
+        sup.onclick=function(){
+c.classList.add('active');
+b.classList.add('bg-active');
+d.classList.remove('act');
+}
+sn.onclick=function(){
+    c.classList.remove('active');
+    b.classList.remove('bg-active');
+    d.classList.add('act');
+        }
+    </script>
+
+   {% endblock script %}
+   
+</body>
+</html>

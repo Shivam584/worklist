@@ -12,9 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,500&family=Oxanium:wght@600&family=Raleway:ital,wght@0,600;0,700;1,600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     {% block title %}
     {% endblock title %}
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
    <!-- Latest compiled and minified CSS -->
 
 </head>
@@ -22,7 +22,7 @@
 <body>
  <header>
         <nav class="nav">
-            <p class="logo">WorkList</p>
+            <p class="logo">WORKLIST</p>
             <ul class="ulist">
                 <li><a href="{% url 'home' %}">HOME</a></li>
                 <li><a href="{% url 'baseapp:add' %}" >ADD </a></li>

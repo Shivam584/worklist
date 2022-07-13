@@ -9,8 +9,8 @@
 
 
   {% block content %}
-<div class="list">
-    <table class="margin">
+<div class="list main-addbox">
+    <table class="margin table-modifiedcss">
         <thead>
             <tr>
                 <th>DATE/TIME</th>
@@ -22,10 +22,10 @@
         <tbody>
          {% for d in data %}
             <tr>
-                <td>{{ d.Datetime }}</td>
-                <td> {{d.title}} </td>
-                <td> {{d.desc}} </td>
-                <td><a href="{% url 'baseapp:delete' d.id %} " class="dele" id="button" >DELETE</a> </td>
+                <td class="sep">{{ d.Datetime }}</td>
+                <td class="sep"> {{d.title}} </td>
+                <td class="sep"> {{d.desc}} </td>
+                <td class="sep"><a href="{% url 'baseapp:delete' d.id %} " class="dele" id="button" >DELETE</a> </td>
             </tr>
             {% endfor %}
         </tbody>

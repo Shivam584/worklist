@@ -7,31 +7,16 @@ body{
     /* gap: 2em; */
     justify-content: center;
     align-items: center;
-    background-color: rgba(240, 255, 255, 0.471);
-}
-
-.ulist li a,.logo {
-    color: #67407D;
-    font-weight: 400;
-    text-shadow: none;
-    text-shadow: 1px 1px #67407D;
-}
-.ulist li a:hover{
-   background-color:#67407D; 
-   color:azure ;
-}
-header,.box-modifiedcss{
-    font-family: 'Lato';
-        width: 80%;
-        border: #67407D 2px solid;
-    }
-    
-    header{
-    background-color:rgba(222, 244, 244, 0.35) ;
-    border-bottom:none ;
+    background-color: #67407D;
 }
 .box-modifiedcss{
-    border-top: none;
+    font-family: 'Lato';
+    width: 80%;
+    box-shadow: 0 0 3px;
+    background-color: white;
+    border: #67407D 2px solid;
+    border-radius: 0 0 10px 10px ;
+    /* border-top: none; */
     padding: 1em;
 }
 .background-image-modifiedcss{
@@ -52,7 +37,7 @@ font-family: 'Lato';
 }
 .pan{
     background-color: #67407D;
-    color: azure;
+    color: white;
     padding: 2px;
 }
 

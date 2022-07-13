@@ -1,3 +1,22 @@
+/* *********************************************
+****************Global CSS*********************
+********************************************* */
+body {
+    /* height: 100vh; */
+    /* width: 100vw; */
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2em; */
+    justify-content: center;
+    align-items: center;
+    background-color: #67407D;
+}
+/* *********************************************
+********************************************* */
+
+
+
 
 * {
     margin: 0;
@@ -47,17 +66,57 @@ header{
         text-shadow: none;
         border-radius: 2px;
 }
+/* **************************************************************** */
+/* ********UPDATED CSS OF NEW NAVBAR*************************** */
+/* **************************************************************** */
+.ulist li a,
+.logo {
+    color: #67407D;
+    font-weight: 400;
+    text-shadow: none;
+    text-shadow: 1px 1px #67407D;
+}
+
+.ulist li a:hover {
+    background-color: #67407D;
+    color: azure;
+}
+header {
+    font-family: 'Lato';
+    width: 80%;
+    border: #67407D 2px solid;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    box-shadow: 0 0 4px;
+}
+/* **************************************************************** */
+/* **************************************************************** */
+/* **************************************************************** */
+
+
 @media screen and (max-width : 650px) {
     .logo{
         margin: .6em;
         font-size:25px;
-
+        
     }
         .ulist li a {
             padding: .075em .2em;
-        font-size:.9em;
+            font-size:.9em;
         }
         .ulist{
             margin-right: 1em ;
         }
-}
+        
+        header{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width : 850px) {
+        .nav{
+            justify-content: center;
+        }
+        
+    }
